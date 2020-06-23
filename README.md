@@ -55,5 +55,5 @@ curl --location --request POST 'http://localhost:9091/apis/employees' \
 * Spring Boot 2.3.1.RELEASE
 * Apache Camel 3.3.0
     * camel-servlet (https://camel.apache.org/camel-spring-boot/latest/servlet-starter.html)
-    * camel-gson-starter (https://camel.apache.org/components/latest/dataformats/json-gson-dataformat.html)
+    * camel-jackson (https://camel.apache.org/components/latest/dataformats/json-jackson-dataformat.html)
     * camel-test-junit5 (https://camel.apache.org/components/latest/others/test-junit5.html)

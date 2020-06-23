@@ -1,4 +1,7 @@
 camel:
+  dataformat:
+    json-gson:
+      pretty-print: true
   component:
     servlet:
       mapping:

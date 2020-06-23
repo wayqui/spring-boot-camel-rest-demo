@@ -1,8 +1,8 @@
 package com.wayqui.bootcamel.mapper;
 
 import com.wayqui.bootcamel.dto.EmployeeDto;
-import com.wayqui.bootcamel.routes.beans.EmployeeRequest;
-import com.wayqui.bootcamel.routes.beans.EmployeeResponse;
+import com.wayqui.bootcamel.api.beans.EmployeeRequest;
+import com.wayqui.bootcamel.api.beans.EmployeeResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

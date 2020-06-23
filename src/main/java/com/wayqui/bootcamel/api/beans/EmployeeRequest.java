@@ -1,8 +1,8 @@
-package com.wayqui.bootcamel.routes.beans;
+package com.wayqui.bootcamel.api.beans;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -12,27 +12,23 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
-public class EmployeeResponse {
+public class EmployeeRequest {
 
-    private String id;
     private String firstName;
     private String lastName;
     private String salary;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate birthDate;
-    private Integer age;
     private String photo;
 
     @Override
     public String toString() {
-        return "EmployeeResponse{" +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
+        return "EmployeeRequest{" +
+                "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary='" + salary + '\'' +
-                ", birthDate=" + birthDate +
-                ", age=" + age +
+                ", birthDate='" + birthDate + '\'' +
                 ", photo='" + photo + '\'' +
                 '}';
     }
